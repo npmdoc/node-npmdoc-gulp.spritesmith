@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/twolfson/gulp.spritesmith"
-
-    >gulp.spritesmith (v6.4.0)</a>
+    <a href="https://github.com/twolfson/gulp.spritesmith">gulp.spritesmith (v6.4.0)</a>
 </h1>
 <h4>Convert a set of images into a spritesheet and CSS variables via gulp</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp.spritesmith">module gulp.spritesmith</a><ol>
 
@@ -97,15 +90,15 @@
     <li>description and source-code<pre class="apidocCodePre">function gulpSpritesmith(params) {
   var imgName = params.imgName;
   var cssName = params.cssName;
-  assert(imgName, &#x27;An `imgName` parameter was not provided to `gulp.spritesmith` (required)&#x27;);
-  assert(cssName, &#x27;A `cssName` parameter was not provided to `gulp.spritesmith` (required)&#x27;);
+  assert(imgName, 'An `imgName` parameter was not provided to `gulp.spritesmith` (required)');
+  assert(cssName, 'A `cssName` parameter was not provided to `gulp.spritesmith` (required)');
 
   // If there are settings for retina, verify our all of them are present
   var retinaSrcFilter = params.retinaSrcFilter;
   var retinaImgName = params.retinaImgName;
   if (retinaSrcFilter || retinaImgName) {
-    assert(retinaSrcFilter &#x26;&#x26; retinaImgName, &#x27;Retina settings detected. We must have both `retinaSrcFilter` and &#x27; +
-      &#x27;`retinaImgName` provided for retina to work&#x27;);
+    assert(retinaSrcFilter &amp;&amp; retinaImgName, 'Retina settings detected. We must have both `retinaSrcFilter` and ' +
+      '`retinaImgName` provided for retina to work');
   }
 
   // Define our output streams
@@ -132,7 +125,7 @@
 
     // Determine the format of the image
     var imgOpts = params.imgOpts || {};
-    var imgFormat = imgOpts.format || imgFormats.get(imgName) || &#x27;png&#x27;;
+    var imgFormat = imgOpts.format || imgFormats.get(imgName) || 'png';
 
     // Set up the defautls for imgOpts
     imgOpts = _.defaults({}, imgOpts, {format: imgFormat});
@@ -161,12 +154,12 @@
 
       // If we have a different amount of normal and retina images, complain and leave
       if (images.length !== retinaImages.length) {
-        var err = new Error(&#x27;Retina settings detected but &#x27; + retinaImages.length + &#x27; retina images were found. &#x27; +
-          &#x27;We have &#x27; + images.length + &#x27; normal images and expect these numbers to line up. &#x27; +
-          &#x27;Please double check `retinaSrcFilter`.&#x27;);
+        var err = new Error('Retina settings detected but ' + retinaImages.length + ' retina images were found. ' +
+          'We have ' + images.length + ' normal images and expect these numbers to line up. ' +
+          'Please double check `retinaSrcFilter`.');
         err.images = images;
         err.retinaImages = retinaImages;
-        this.emit(&#x27;error&#x27;, err);
+        this.emit('error', err);
         imgStream.push(null);
         cssStream.push(null);
         return cb();
@@ -232,3 +225,4 @@
     ]
 </div>
 </div>
+</body></html>
