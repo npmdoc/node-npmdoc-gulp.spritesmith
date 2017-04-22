@@ -115,7 +115,7 @@
 <tspan x="10" y="1802">  │ │ │ │ ├─┬ form-data@2.1.4 </tspan>
 <tspan x="10" y="1818">  │ │ │ │ │ └── asynckit@0.4.0 </tspan>
 <tspan x="10" y="1834">  │ │ │ │ ├─┬ har-validator@4.2.1 </tspan>
-<tspan x="10" y="1850">  │ │ │ │ │ ├─┬ ajv@4.11.6 </tspan>
+<tspan x="10" y="1850">  │ │ │ │ │ ├─┬ ajv@4.11.7 </tspan>
 <tspan x="10" y="1866">  │ │ │ │ │ │ ├── co@4.6.0 </tspan>
 <tspan x="10" y="1882">  │ │ │ │ │ │ └─┬ json-stable-stringify@1.0.1 </tspan>
 <tspan x="10" y="1898">  │ │ │ │ │ │   └── jsonify@0.0.0 </tspan>
